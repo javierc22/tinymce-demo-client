@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <img alt="Vue logo" src="../assets/logo.png">
 
     <editor
