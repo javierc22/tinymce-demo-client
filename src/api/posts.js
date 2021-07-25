@@ -21,3 +21,12 @@ export async function createPost(payload) {
     return error
   } finally {}
 }
+
+export async function fetchPost(id) {
+  try {
+    const { data } = await axiosCLient(`/posts/${id}`);
+    return data
+  } catch (error) {
+    return error
+  } finally {}
+}
