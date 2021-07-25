@@ -38,7 +38,6 @@ export default {
   },
   methods: {
     async getPost(id) {
-      console.log(id);
       const res = await fetchPost(id)
       this.post = res
     }
