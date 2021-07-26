@@ -11,6 +11,10 @@
       </div>
     </div>
 
+    <div class="box" v-if="posts.length === 0">
+      No hay publicaciones.
+    </div>
+
     <div class="columns">
       <div class="column is-two-fifths" v-for="(post, i) in posts" :key="i">
         <PostCard :post="post" />
