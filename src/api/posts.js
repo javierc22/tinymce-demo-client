@@ -39,3 +39,12 @@ export async function updatePost(payload) {
     return error
   } finally {}
 }
+
+export async function deletePost(id) {
+  try {
+    const { data } = await axiosCLient.delete(`/posts/${id}`)
+    return data
+  } catch (error) {
+    return error
+  } finally {}
+}

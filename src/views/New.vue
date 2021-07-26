@@ -42,7 +42,7 @@ export default {
       this.isLoading = true
       const res = await createPost(this.post)
 
-      if(res.success) this.$router.push(`/${this.post.id}`)
+      if(res.success) this.$router.push(`/${res.post_id}`)
 
       this.isLoading = false
     }
