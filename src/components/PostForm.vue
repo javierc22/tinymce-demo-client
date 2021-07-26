@@ -9,11 +9,13 @@
     </b-field>
 
     <TinyEditor 
-      :content="post.content" 
+      :value="post.content" 
       @setValue="(value) => post.content = value" 
     />
 
-    <button type="submit" class="button is-primary mt-3">Crear publicación</button>
+    <button type="submit" class="button is-primary mt-3">
+      {{ action }}
+    </button>
   </form>
 </template>
 <script>
@@ -23,6 +25,7 @@ export default {
   props: {
     post: { type: Object, required: true },
     submitForm: { type: Function, required: true },
+    action: { type: String, required: true },
   },
   methods: {
     handleSubmitForm() {

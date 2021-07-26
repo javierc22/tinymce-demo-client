@@ -5,6 +5,7 @@
       v-model="content"
       :api-key="apiKey"
       :init="{
+        content_style: customStyle,
         height: 500,
         menubar: false,
         selector: 'textarea',
@@ -40,7 +41,8 @@ export default {
   },
   data() {
     return {
-      apiKey: process.env.VUE_APP_TINYMCE_API_KEY
+      apiKey: process.env.VUE_APP_TINYMCE_API_KEY,
+      customStyle: "body { line-height: 1; } p { margin: 0; }"
     }
   },
   computed: {
@@ -55,6 +57,5 @@ export default {
   }
 }
 </script>
-<style lang="">
-  
+<style lang="css">
 </style>

@@ -9,7 +9,11 @@
 
     <h2 class="title is-3">Nueva publicación</h2>
 
-    <PostForm :post="post" :submitForm="submitForm" />
+    <PostForm 
+      :post="post" 
+      :submitForm="submitForm"
+      action="Crear publicación"
+    />
 
     <b-loading :is-full-page="true" v-model="isLoading" :can-cancel="false"></b-loading>
   </div>
@@ -38,9 +42,7 @@ export default {
       this.isLoading = true
       const res = await createPost(this.post)
 
-      if(res.success) {
-        this.$router.push("/")
-      }
+      if(res.success) this.$router.push(`/${this.post.id}`)
 
       this.isLoading = false
     }
