@@ -15,8 +15,8 @@
       No hay publicaciones.
     </div>
 
-    <div class="columns">
-      <div class="column is-two-fifths" v-for="(post, i) in posts" :key="i">
+    <div class="columns is-multiline">
+      <div class="column is-4" v-for="(post, i) in posts" :key="i">
         <PostCard :post="post" />
       </div>
     </div>
