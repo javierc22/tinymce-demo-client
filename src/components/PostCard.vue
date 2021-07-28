@@ -11,7 +11,7 @@
       <div class="content">
         <p v-html="post.extract"></p>
         <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        <time>{{ post.created_at }} hrs</time>
       </div>
     </div>
   </div>

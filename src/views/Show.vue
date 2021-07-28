@@ -9,6 +9,9 @@
 
     <h1 class="title">{{ post.title }}</h1>
     <h2 class="subtitle">
+      {{ post.created_at }} hrs
+    </h2>
+    <h2 class="subtitle">
       {{ post.extract }}
     </h2>
 
