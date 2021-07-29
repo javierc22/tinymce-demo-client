@@ -31,6 +31,15 @@ export async function fetchPost(id) {
   } finally {}
 }
 
+export async function fetchPostEdit(id) {
+  try {
+    const { data } = await axiosCLient(`/posts/${id}/edit`);
+    return data
+  } catch (error) {
+    return error
+  } finally {}
+}
+
 export async function updatePost(payload) {
   try {
     const { data } = await axiosCLient.put(`/posts/${payload.id}`, payload)

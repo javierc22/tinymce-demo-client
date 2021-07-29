@@ -1,11 +1,6 @@
 <template>
   <section class="section">
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-      <ul>
-        <li><router-link :to="'/'">Inicio</router-link></li>
-        <li class="is-active"><router-link :to="'#'">{{ post.title }}</router-link></li>
-      </ul>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
 
     <h1 class="title">{{ post.title }}</h1>
     <h2 class="subtitle">
@@ -34,12 +29,22 @@
 </template>
 <script>
 import { deletePost, fetchPost } from "@/api/posts"
+import Breadcrumbs from '../components/Breadcrumbs.vue'
 
 export default {
+  components: { Breadcrumbs },
   data() {
     return {
       post: {},
       isLoading: false
+    }
+  },
+  computed: {
+    breadcrumbs() {
+      return [
+        { to: "/", text: "Inicio", is_active: false },
+        { to: "", text: this.post.title, is_active: true }
+      ]
     }
   },
   methods: {
