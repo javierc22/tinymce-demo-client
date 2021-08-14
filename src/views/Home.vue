@@ -31,7 +31,6 @@ export default {
   name: 'Home',
   components: {
     PostCard
-
   },
   data() {
     return {
