@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import Home from '@/views/Home.vue'
 import { fetchPosts } from "@/api/posts"
-import { postsData } from "../helpers/data"
+import { postsData } from "../../helpers/data"
 import PostCard from '@/components/PostCard'
 
 jest.mock('@/api/posts')
