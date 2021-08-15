@@ -19,8 +19,8 @@
       <b-button type="is-primary" tag="router-link" :to="`/${$route.params.id}/editar`">
         Editar
       </b-button>
-      <b-button type="is-danger" @click="alertConfirm">
-          Eliminar
+      <b-button type="is-danger" @click="alertConfirm()">
+        Eliminar
       </b-button>
     </div>
 

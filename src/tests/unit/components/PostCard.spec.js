@@ -28,7 +28,7 @@ describe('PostCard component', () => {
 
 describe('Events PostCard Components', () => {
   let wrapper = null
-  
+
   const $route = {
     name: "/1"
   }
@@ -50,5 +50,5 @@ describe('Events PostCard Components', () => {
   it('should redirect /:id when click in PostCard', async() => {
     await wrapper.trigger('click')
     expect(wrapper.vm.$route.name).toBe(`/1`)
-  });
+  })
 })
