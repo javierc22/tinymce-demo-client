@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 require("./plugins/buefy")
+require("./plugins/vuelidate")
 import axios from './plugins/axios';
 
 Vue.use(axios);
